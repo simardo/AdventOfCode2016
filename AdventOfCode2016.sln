@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day01", "Day01\Day01.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libs", "Libs\Libs.csproj", "{19B25E64-1F62-4E54-B068-56EB2DBD2D33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day00", "Day00\Day00.csproj", "{D996CD48-0122-4709-A6E5-805253B5AAA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day00", "Day00\Day00.csproj", "{D996CD48-0122-4709-A6E5-805253B5AAA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{483D0718-2159-46C3-9909-A81497B99D62}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
