@@ -1,23 +1,20 @@
 ﻿namespace Day01 {
     internal class Part1 {
-        Dictionary<char, char> left;
-        Dictionary<char, char> right;
-        Dictionary<char, Dictionary<char, char>> leftOrRight;
+        Dictionary<char, char> left = new Dictionary<char, char>();
+        Dictionary<char, char> right = new Dictionary<char, char>();
+        Dictionary<char, Dictionary<char, char>> leftOrRight = new Dictionary<char, Dictionary<char, char>>();
 
         public Part1() {
-            left = new Dictionary<char, char>();
             left.Add('N', 'W');
             left.Add('W', 'S');
             left.Add('S', 'E');
             left.Add('E', 'N');
 
-            right = new Dictionary<char, char>();
             right.Add('N', 'E');
             right.Add('E', 'S');
             right.Add('S', 'W');
             right.Add('W', 'N');
 
-            leftOrRight = new Dictionary<char, Dictionary<char, char>>();
             leftOrRight.Add('R', right);
             leftOrRight.Add('L', left);
         }
