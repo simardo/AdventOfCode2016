@@ -22,10 +22,10 @@ IServiceProvider serviceProvider = scope.ServiceProvider;
 
 InputLoaderService svc = serviceProvider.GetRequiredService<InputLoaderService>();
 string s = await svc.GetInputAsync(year, day);
+s = s.TrimEnd('\n');
 
-using StreamWriter sw = new StreamWriter($"{Environment.CurrentDirectory}\\input.txt");
-sw.Write(s);
+File.AppendAllText($"{Environment.CurrentDirectory}\\input.txt", s);
+
+Console.WriteLine("Done, Ctrl-C to quit");
 
 await host.RunAsync();
-
-Console.WriteLine("Done");
