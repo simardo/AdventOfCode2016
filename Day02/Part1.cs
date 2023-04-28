@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace Day02 {
+﻿namespace Day02 {
     internal class Part1 {
         Dictionary<char, int> index = new Dictionary<char, int>();
         Dictionary<int, int[]> keyPad = new Dictionary<int, int[]>();
