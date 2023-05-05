@@ -10,17 +10,16 @@
 
             string[] messages = input.Replace("\r", null).Split('\n');
             foreach (string message in messages) {
-                char[] chars = message.ToCharArray();
                 if (corrected.Count == 0) {
-                    for (int i = 1; i <= chars.Length; i++) { 
+                    for (int i = 1; i <= message.Length; i++) { 
                         corrected.Add(new Dictionary<char, int>());
                     }
                 }
-                for (int i = 0; i < chars.Length; i++) {
-                    if (!corrected[i].ContainsKey(chars[i])) {
-                        corrected[i].Add(chars[i], 0);
+                for (int i = 0; i < message.Length; i++) {
+                    if (!corrected[i].ContainsKey(message[i])) {
+                        corrected[i].Add(message[i], 0);
                     }
-                    corrected[i][chars[i]] = corrected[i][chars[i]] + 1;
+                    corrected[i][message[i]] = corrected[i][message[i]] + 1;
                 }
             }
 
