@@ -21,7 +21,7 @@ namespace Day04 {
                 string checksum = gc[3].Value;
 
                 Dictionary<char, int> dict = new Dictionary<char, int>();
-                foreach (char c in name.ToCharArray()) {
+                foreach (char c in name) {
                     if (!dict.ContainsKey(c)) {
                         dict.Add(c, 0);
                     }
@@ -32,7 +32,7 @@ namespace Day04 {
 
                 if (verifier.StartsWith(checksum)) {
                     int shift = id % 26;
-                    string decoded = new(originalName.ToCharArray().Select(c => {
+                    string decoded = new(originalName.Select(c => {
                         if (c == '-') {
                             return ' ';
                         }
